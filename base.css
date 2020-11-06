@@ -1,0 +1,68 @@
+/* base styles */
+
+
+*,::before,::after{
+
+    box-sizing:border-box;
+}
+
+body{
+
+    align-content:center;
+    background-image:url(./images/pattern-bg.png);
+    /* background-repeat: no-repeat; */
+}
+
+h2 {
+    
+    color:white;
+    text-align: center;
+}
+
+button {
+    background-color: hsl(0, 0%, 17%);
+    transform: translate(-15%,10%);
+    border-radius:5px;
+}
+
+.form {
+    border-radius:50px;
+    display:table;
+    margin:auto;
+}
+
+.location p{
+    text-transform:uppercase;
+    color:hsl(0, 0%, 59%);
+}
+
+input {
+    font-weight:18px;
+}
+
+
+@media (min-width:375px){
+    .location{
+        display:grid;
+        grid-template-columns:90%;
+        grid-gap: 0px;
+        background-color: white;
+        border-radius:15px;
+    
+    }
+
+}
+
+@media (min-width:768px){
+    .location{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-gap: 0px;
+    
+    }
+
+}
+
+@media (min-width:992px){
+
+}
