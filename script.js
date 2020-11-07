@@ -1,4 +1,18 @@
 // scripts
+//leaflet scripts
+var mymap = L.map('mapid').setView([51.505, -0.09],13);
+ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  maxZoom: 18,
+  id: 'mapbox/streets-v11',
+  tileSize: 512,
+  zoomOffset: -1,
+  accessToken:'{{MAPBOX_TOKEN}}'
+}).addTo(mymap);
+
+
+//ip address scripts
+
 const Form = document.form.input.value;
 const Btn = document.querySelector('.button');
 const Ip = document.querySelector('.ipad');
@@ -12,7 +26,6 @@ Btn.addEventListener('click', (e)=>{
     // if (Form === ''){
     //     alert('field cannot be empty');
     // }
-
    fetch(`https://geo.ipify.org/api/v1?apiKey={{IPIFY_TOKEN}}&ipAddress=${Form}`)
    .then(function(response){
     return response.json()})
