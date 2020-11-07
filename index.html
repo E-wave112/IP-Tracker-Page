@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="base.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin="">
+ </script>
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -25,28 +32,44 @@
 <div class="location">
   <div>
   <p>IP Address</p>
+  <p class="ipad"></p>
 </div>
 
 <div>
   <p>Location</p>
+  <p class="locat"></p>
 </div>
 
 <div>
   <p>Timezone</p>
+  <p class="time"></p>
 </div>
 
-<!-- <div>
-   <p> UTC</p>  add offset value dynamically using the API -->
-  <!-- </div> -->
   <div>
   <p>ISP</p>
+  <p class="internet"></p>
   </div>
 </div>
+
+<div id="mapid"></div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="mailto:iyayiemmanuel1@gmail.com">E-wave</a>.
   </div>
   <script src="script.js"></script>
+  <script>
+    //leaflet scripts
+    var mymap = L.map('mapid').setView([51.505, -0.09],13);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+  attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  maxZoom: 18,
+  id: 'mapbox/streets-v11',
+  tileSize: 512,
+  zoomOffset: -1,
+  accessToken:'{{MAPBOX_TOKEN}}'
+}).addTo(mymap);
+
+</script>
 </body>
 </html>
