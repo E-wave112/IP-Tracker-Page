@@ -1,5 +1,9 @@
 // scripts
 //leaflet scripts
+const dotenv = require('dotenv');
+dotenv.config();
+const mapBox = process.env.MAPBOX_TOKEN
+const ipify = process.env.IPIFY_TOKEN
 var mymap = L.map('mapid').setView([51.505, -0.09],13);
  L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${accessToken}`, {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -7,7 +11,7 @@ var mymap = L.map('mapid').setView([51.505, -0.09],13);
   id: 'mapbox/streets-v11',
   tileSize: 512,
   zoomOffset: -1,
-  accessToken:`${{MAPBOX_TOKEN}}`
+  accessToken:mapBox
 }).addTo(mymap);
 
 
@@ -26,7 +30,7 @@ Btn.addEventListener('click', (e)=>{
     // if (Form === ''){
     //     alert('field cannot be empty');
     // }
-   fetch(`https://geo.ipify.org/api/v1?apiKey=${{IPIFY_TOKEN}}&ipAddress=${Form}`)
+   fetch(`https://geo.ipify.org/api/v1?apiKey=${{ipify}}&ipAddress=${Form}`)
    .then(function(response){
     return response.json()})
 .then(function(data){
