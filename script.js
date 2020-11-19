@@ -32,8 +32,8 @@ Btn.addEventListener('click', (e)=>{
    .then(function(response){
     return response.json()})
 .then(function(data){
-    console.log(data.location);
-    console.log(data.location.timezone);
+    console.log(data);
+    //console.log(data.location.timezone);
     Ip.textContent = Form;
     Locate.textContent = data.location.region;
     Time.textContent = 'UTC ' + data.location.timezone;
