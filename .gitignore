@@ -17,5 +17,7 @@
 ##env files
 *.env
 #node-files
-node_modules
+node_modules/
 package-lock.json
+file.json
+package.json

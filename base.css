@@ -3,12 +3,14 @@
 
 *,::before,::after{
     box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 body{
     font-family: 'Rubik', sans-serif;
     align-content:center;
-    background-image:url(./images/pattern-bg.png);
+    background-image:url('./images/pattern-bg.png');
     /* background-repeat: no-repeat; */
 }
 
@@ -22,12 +24,16 @@ button {
     background-color: hsl(0, 0%, 17%);
     transform: translate(-15%,10%);
     border-radius:5px;
+    height:40px;
+    cursor: pointer;
+    
 }
 
 .form {
     border-radius:50px;
     display:table;
     margin:auto;
+    
 }
 
 .location{
@@ -41,6 +47,9 @@ button {
 
 input {
     font-weight:18px;
+    border-radius: 10px;
+    height:40px;
+    
 }
 
 .ipad, .locat, .time, .internet {
@@ -49,9 +58,10 @@ input {
     font-weight:bolder;
 }
 
-#mapid{
-    height:100%;
-}
+#map {
+    height: 100%;
+  }
+  
 
 @media (min-width:375px){
     .location{
@@ -72,6 +82,7 @@ input {
         grid-gap: 0px;
     
     }
+
 
 }
 
