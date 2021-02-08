@@ -1,1 +1,1 @@
-A social media themeswitcher dashboard made with HTML5,CSS and Vanilla Javascript
+An ip-address-tracker made with HTML5,CSS and Javascript FetchAPI and a map visualizer using LeafletJS
