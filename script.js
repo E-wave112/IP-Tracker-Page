@@ -42,7 +42,7 @@ Btn.addEventListener('click', (e)=>{
         // JS API is loaded and available
             map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: data.location.lat, lng: data.location.lng},
-                zoom: 8
+                zoom: 13
         });
     };
     // Append the 'script' element to 'head'

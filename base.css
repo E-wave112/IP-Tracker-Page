@@ -64,11 +64,7 @@ input {
     font-weight:bolder;
 }
 
-#map {
-    height: 100%;
-    transform: translateY(-20%);
-  }
-  
+
 
 @media (min-width:300px){
     .location{
@@ -77,8 +73,14 @@ input {
         grid-gap: 0px;
         background-color: white;
         border-radius:15px;
+        transform: translateY(20%) !important;
     
     }
+    #map {
+        height: 100%;
+       
+      }
+      
 
 }
 
@@ -87,8 +89,15 @@ input {
         display:grid;
         grid-template-columns:1fr 1fr 1fr 1fr;
         grid-gap: 0px;
+        transform: translateY(10%)  !important;
     
     }
+
+    #map {
+        height: 100%;
+       
+      }
+      
 
 
 }
