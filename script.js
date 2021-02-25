@@ -8,7 +8,7 @@ const Int = document.querySelector('.internet');
 const Location = document.querySelector('.location')
 const mapId = document.getElementById('map')
 const img = document.querySelector('.no-image');
-const body = document.querySelector('.body')
+const body = document.querySelector('.html')
 // Create the script tag, set the appropriate attributes
 
       
