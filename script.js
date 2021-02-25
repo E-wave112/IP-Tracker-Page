@@ -1,6 +1,4 @@
 //ip address scripts
-const Form = document.form.input.value;
-const Btn = document.querySelector('.button');
 const Ip = document.querySelector('.ipad');
 const Locate = document.querySelector('.locat');
 const Time = document.querySelector('.time')
@@ -8,7 +6,6 @@ const Int = document.querySelector('.internet');
 const Location = document.querySelector('.location')
 const mapId = document.getElementById('map')
 const img = document.querySelector('.no-image');
-const body = document.querySelector('.body')
 // Create the script tag, set the appropriate attributes
 
       
@@ -37,13 +34,6 @@ window.addEventListener('load', ()=>{
     };
     // Append the 'script' element to 'head'
     document.head.appendChild(script);
-
-
-        // Int.textContent = data.isp;
-        // var mymap = L.map('mapid',{
-        //     center:[data.location.lat, data.location.lng],
-        //     zoom:13
-        // });
 
     })
     .catch(err => console.error(err))
