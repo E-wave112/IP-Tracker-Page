@@ -12,7 +12,7 @@ const body = document.querySelector('.body')
 // Create the script tag, set the appropriate attributes
 
       
-body.addEventListener('load', (e)=>{
+body.addEventListener('load', ()=>{
     
      fetch(`https://geo.ipify.org/api/v1?apiKey=at_3TMbe7B2C2u3cUVsAHVTemaudvtoM&ipAddress=${Form}`)
     .then(response => response.json())
