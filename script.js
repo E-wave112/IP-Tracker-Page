@@ -20,6 +20,7 @@ const Ip = document.querySelector('.ipad');
 const Locate = document.querySelector('.locat');
 const Time = document.querySelector('.time')
 const Int = document.querySelector('.internet');
+const Location = document.querySelector(".location")
 // Create the script tag, set the appropriate attributes
 
       
@@ -33,6 +34,7 @@ Btn.addEventListener('click', (e)=>{
         Locate.textContent = data.location.region;
         Time.textContent = 'UTC ' + data.location.timezone;
         Int.textContent = data.isp;
+        Location.style.transform = "translateY(40%)";
         var script = document.createElement('script');
         script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDrq-3maSN2UxKEtfjUTOi-MPSKbb-x1Kk&callback=initMap';
         script.async = true;

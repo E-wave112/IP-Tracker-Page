@@ -17,6 +17,7 @@ body{
     font-family: 'Rubik', sans-serif;
     align-content:center;
     background-image:url('./images/pattern-bg.png');
+
     /* background-repeat: no-repeat; */
 }
 
@@ -32,7 +33,16 @@ button {
     border-radius:5px;
     height:40px;
     cursor: pointer;
+
     
+}
+
+input[type=text]{
+    font-size: 18px;
+}
+
+p {
+    text-align: center;
 }
 
 .form {
@@ -45,10 +55,12 @@ button {
 .location{
     width:80%;
     margin:auto;
+    
 }
 .location p{
     text-transform:uppercase;
     color:hsl(0, 0%, 59%);
+   
 }
 
 input {
@@ -64,6 +76,11 @@ input {
     font-weight:bolder;
 }
 
+.loc,.ip,.int,.tim{
+    font-weight: bolder;
+
+}
+
 
 
 @media (min-width:300px){
@@ -73,11 +90,14 @@ input {
         grid-gap: 0px;
         background-color: white;
         border-radius:15px;
-        transform: translateY(20%) !important;
+        /* transform: translateY(50%) !important; */
+        background-size: cover;
+        
     
     }
     #map {
         height: 100%;
+        z-index: -1;
        
       }
       
@@ -88,13 +108,17 @@ input {
     .location{
         display:grid;
         grid-template-columns:1fr 1fr 1fr 1fr;
+        background-color: white;
         grid-gap: 0px;
-        transform: translateY(10%)  !important;
+        /* transform: translateY(50%)  !important; */
+        background-size: cover;
+       
     
     }
 
     #map {
         height: 100%;
+        z-index: -1;
        
       }
       
