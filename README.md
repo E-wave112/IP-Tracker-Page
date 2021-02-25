@@ -1,1 +1,1 @@
-An ip-address-tracker made with HTML5,CSS and Javascript FetchAPI and a map visualizer using LeafletJS
+A Responsive IP Address Tracker page  built with with HTML, CSS and JS and a map visualizer using Google Maps
