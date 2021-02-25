@@ -81,6 +81,21 @@ input {
 
 }
 
+.img-loca,.img-location{
+
+    margin: 50% 50% !important;
+}
+
+.image{
+    max-width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.no-image{
+    visibility: hidden;
+    z-index: 1 !important;
+}
 
 
 @media (min-width:300px){
