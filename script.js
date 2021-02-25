@@ -8,13 +8,13 @@ const Int = document.querySelector('.internet');
 const Location = document.querySelector('.location')
 const mapId = document.getElementById('map')
 const img = document.querySelector('.no-image');
-const body = document.querySelector('.html')
+const body = document.querySelector('.body')
 // Create the script tag, set the appropriate attributes
 
       
-body.addEventListener('load', ()=>{
+window.addEventListener('load', ()=>{
     
-     fetch(`https://geo.ipify.org/api/v1?apiKey=at_3TMbe7B2C2u3cUVsAHVTemaudvtoM&ipAddress=${Form}`)
+     fetch('https://geo.ipify.org/api/v1?apiKey=at_3TMbe7B2C2u3cUVsAHVTemaudvtoM')
     .then(response => response.json())
     .then(data => {
         Ip.textContent = data.ip;
