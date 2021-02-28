@@ -18,7 +18,7 @@ window.addEventListener('load', ()=>{
         Locate.textContent = data.location.region;
         Time.textContent = 'UTC ' + data.location.timezone;
         Int.textContent = data.isp;
-        Location.style.transform = "translateY(40%)";
+        Location.style.transform = "translateY(30%)";
         img.classList.toggle('image');
         var script = document.createElement('script');
         script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDrq-3maSN2UxKEtfjUTOi-MPSKbb-x1Kk&callback=initMap';
